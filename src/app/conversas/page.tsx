@@ -37,7 +37,7 @@ interface Conversation {
 const DEMO_CONVERSATIONS: Conversation[] = [
   {
     id: '1',
-    contact: { name: 'Carlos Silva', company: 'TechCorp Brasil', avatar: 'CS' },
+    contact: { name: 'Thais Cano', company: 'Skyone Solutions', avatar: 'TC' },
     lastMessage: 'Olá! Gostaria de agendar uma demonstração do produto para a próxima semana.',
     timestamp: '10:32',
     unread: 2,

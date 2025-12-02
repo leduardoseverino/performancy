@@ -46,7 +46,7 @@ export const useAppStore = create<AppState>()(
       // User
       user: {
         id: '1',
-        name: 'Thais Rui Cano',
+        name: 'Thais Cano',
         email: 'thais@skyone.com',
         role: 'Sales Manager',
         team: 'Skyone',
@@ -176,7 +176,7 @@ export const DEMO_DEALS: Deal[] = [
     owner: 'Thais Rui Cano',
     createdAt: '2024-01-10T10:00:00Z',
     updatedAt: '2024-01-12T14:30:00Z',
-    contact: { name: 'Carlos Silva', email: 'carlos@techcorp.com.br' },
+    contact: { name: 'Thais Cano', email: 'thais.cano@skyone.solutions' },
   },
   {
     id: '2',
