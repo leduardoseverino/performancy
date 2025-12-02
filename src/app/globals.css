@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@200,300,400,500,600,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #fafaf9;
+  --foreground: #1c1917;
+  --card-bg: #ffffff;
+  --border-color: #e7e5e4;
+  --accent: #f97316;
+  --accent-light: #fff7ed;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
+}
+
+/* Stage colors */
+.stage-lead {
+  --stage-color: #78716c;
+}
+
+.stage-discovery {
+  --stage-color: #3b82f6;
+}
+
+.stage-qualified {
+  --stage-color: #22c55e;
+}
+
+.stage-proposal {
+  --stage-color: #f97316;
+}
+
+.stage-negotiation {
+  --stage-color: #a855f7;
+}
+
+.stage-closed-won {
+  --stage-color: #10b981;
+}
+
+.stage-closed-lost {
+  --stage-color: #ef4444;
+}
+
+/* Animation keyframes */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+/* Stagger children animations */
+.stagger-children > * {
+  animation: slideIn 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 50ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 150ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 250ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 350ms; }
+
+/* Card hover effects */
+.card-interactive {
+  transition: all 0.2s ease;
+}
+
+.card-interactive:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Progress bar for stages */
+.progress-bar {
+  background: linear-gradient(90deg, var(--stage-color) var(--progress), #e7e5e4 var(--progress));
+  border-radius: 4px;
+  height: 6px;
+}
+
